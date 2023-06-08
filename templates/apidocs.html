@@ -1,5 +1,93 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>api docs</p>
-{% endblock %} 
+<div class="bg-gray-100 min-h-screen py-8">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="bg-white shadow-md rounded-md p-6 mb-6">
+        <h1 class="text-3xl font-bold mb-8">API Documentation</h1>
+        <p class="text-gray-700 mb-8">This is the documentation for the API endpoints.</p>
+    </div>
+
+
+        <!-- API Endpoint 1 -->
+        <div class="bg-white shadow-md rounded-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Endpoint 1</h2>
+            <p class="text-gray-700 mb-2">Description of Endpoint 1.</p>
+            <pre class="bg-gray-200 rounded-md p-4 mb-4">
+<code class="text-gray-600">
+// Request
+GET /api/endpoint1 HTTP/1.1
+Host: example.com
+
+// Response
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "Response from Endpoint 1"
+}
+</code>
+                </pre>
+            <h3 class="text-lg font-semibold mb-2">Parameters</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>param1: description of param1</li>
+                <li>param2: description of param2</li>
+            </ul>
+            <h3 class="text-lg font-semibold mb-2">Response</h3>
+            <p class="text-gray-700 mb-4">Description of the response.</p>
+            <pre class="bg-gray-200 rounded-md p-4">
+<code class="text-gray-600">
+{
+  "message": "Response from Endpoint 1"
+}
+</code>
+                </pre>
+        </div>
+
+        <!-- API Endpoint 2 -->
+        <div class="bg-white shadow-md rounded-md p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Endpoint 2</h2>
+            <p class="text-gray-700 mb-2">Description of Endpoint 2.</p>
+            <pre class="bg-gray-200 rounded-md p-4 mb-4">
+<code class="text-gray-600">
+// Request
+POST /api/endpoint2 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "param1": "value1",
+  "param2": "value2"
+}
+
+// Response
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "message": "Response from Endpoint 2"
+}
+</code>
+                </pre>
+            <h3 class="text-lg font-semibold mb-2">Parameters</h3>
+            <ul class="list-disc list-inside mb-4">
+                <li>param1: description of param1</li>
+                <li>param2: description of param2</li>
+            </ul>
+            <h3 class="text-lg font-semibold mb-2">Response</h3>
+            <p class="text-gray-700 mb-4">Description of the response.</p>
+            <pre class="bg-gray-200 rounded-md p-4">
+<code class="text-gray-600">
+{
+  "message": "Response from Endpoint 2"
+}
+</code>
+                </pre>
+        </div>
+
+        <!-- Add more API endpoints here -->
+
+    </div>
+</div>
+
+{% endblock %}
