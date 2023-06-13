@@ -5,55 +5,37 @@
 <div class="flex-grow flex items-center justify-center overflow-hidden p-4">
     <div class="bg-while rounded-lg shadow-lg p-6">
         <div class="flex items-center space-x-9">
-            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full">
             <div>
-                <h3 class="text-xl font-semibold">Card Name</h3>
-                <p class="text-gray-600">Card Category</p>
+                <h3 class="text-xl font-semibold">{{ data['API'] }}</h3>
+                <p class="text-gray-600">{{ data['Category'] }}</p>
             </div>
-            <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">API Link</a>
+            <a href="{{ data['Link']}}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">API Link</a>
         </div>
 
         <hr class="border-gray-300 my-4">
 
         <div class="mt-4 grid grid-cols-3 gap-4">
             <div>
-                <h4 class="text-lg font-semibold">Text 1</h4>
+                <h4 class="text-lg font-semibold">Auth</h4>
                 <div class="flex items-center space-x-2">
-                    <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                    </svg>
-                    <p class="text-gray-600">Actual text for Text 3 goes here...</p>
+                    <p class="text-gray-600">{{ data['Auth'] }}</p>
                 </div>
             </div>
             <div>
-                <h4 class="text-lg font-semibold">Text 2</h4>
+                <h4 class="text-lg font-semibold">HTTPS</h4>
                 <div class="flex items-center space-x-2">
-                    <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                    </svg>
-                    <p class="text-gray-600">Actual text for Text 3 goes here...</p>
+                    <p class="text-gray-600">{{ data['HTTPS'] }}</p>
                 </div>
             </div>
             <div>
-                <h4 class="text-lg font-semibold">Text 3</h4>
+                <h4 class="text-lg font-semibold">Cors</h4>
                 <div class="flex items-center space-x-2">
-                    <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                    </svg>
-                    <p class="text-gray-600">Actual text for Text 3 goes here...</p>
+                    <p class="text-gray-600">{{ data['Cors'] }}</p>
                 </div>
             </div>
             <div class="col-span-3">
                 <h4 class="text-lg font-semibold">Description</h4>
-                <p class="text-gray-600">
-                    Actual description goes here...
-                </p>
+                <p class="text-gray-600">{{ data['Description'] }}</p>
             </div>
         </div>
     </div>

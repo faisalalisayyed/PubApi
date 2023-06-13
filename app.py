@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_caching import Cache
 import requests
-from flask_paginate import Pagination, get_page_parameter
 
 app = Flask(__name__)
 cache = Cache(app,config={'CACHE_TYPE': 'simple'})
@@ -43,7 +42,9 @@ def home():
 
 @app.route('/random')
 def random():
-    return render_template('random.html')
+    url = 'https://api.publicapis.org/random'
+    data = requests.get(url).json()['entries'][0]
+    return render_template('random.html',data=data)
 
 @app.route('/submit')
 def submit():
