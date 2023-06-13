@@ -1,95 +1,32 @@
 {% extends 'base.html' %}
 
-<!-- blue color for highlight in the button -->
-
 {% block content %}
 
 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <!-- category code start -->
-    <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-        <button type="button"
-            class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
-            categories</button>
-        <button type="button"
-            class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>
-        <button type="button"
-            class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Bags</button>
-        <button type="button"
-            class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Electronics</button>
-        <button type="button"
-            class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:text-white dark:focus:ring-gray-800">Gaming</button>
+
+    <div class="flex items-center justify-center w-full">
+        <select id="mySelect"
+            class=" flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="all">Select a Category</option>
+            {% for category in categories %}
+            <option value="{{category}}">{{category}}</option>
+            {% endfor %}
+        </select>
     </div>
-    <!-- code end  -->
 
     <!-- card code start -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
-        <a href="#"
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
-
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4" id="data-from-js">
     </div>
     <!-- code end -->
 
     <!-- pagination code start -->
-    <div class="flex flex-col items-center p-5">
-        <!-- Help text -->
-        <span class="text-sm text-gray-700 dark:text-gray-400">
-            Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span
-                class="font-semibold text-gray-900 dark:text-white">10</span> of <span
-                class="font-semibold text-gray-900 dark:text-white">100</span> Entries
-        </span>
-        <!-- Buttons -->
-        <div class="inline-flex mt-2 xs:mt-0">
-            <button
+    <div class="flex flex-col items-center p-4" id="pagination">
+        <div class="flex justify-between mt-2 xs:mt-0 pagination">
+            <button onclick="pre()"
                 class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                 Prev
             </button>
-            <button
+            <button onclick="next()"
                 class="px-4 py-2 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                 Next
             </button>
@@ -97,4 +34,7 @@
     </div>
     <!-- code end -->
 </div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 {% endblock %}
