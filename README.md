@@ -2,7 +2,7 @@
 
 #### Public API's website using flask and [API](https://api.publicapis.org/)
 
-## About BeautifulSoup
+## About Flask
 * Flask is a lightweight and flexible web framework for Python.
 * It follows the WSGI standard and is compatible with various web servers.
 * Flask's modular design allows for easy integration of extensions to enhance functionality.
