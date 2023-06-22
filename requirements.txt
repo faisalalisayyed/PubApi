@@ -1,0 +1,4 @@
+Flask==2.2.2
+Flask_Caching==2.0.1
+flask_sqlalchemy==3.0.4
+requests==2.25.1

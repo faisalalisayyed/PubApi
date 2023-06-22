@@ -1,24 +1,8 @@
-from flask import Flask, render_template, request, jsonify, flash, redirect, url_for
-from flask_caching import Cache
-from flask_sqlalchemy import SQLAlchemy
+from PubApi import app, cache, db
+from PubApi.models import Submit_data
+from flask import render_template, request, jsonify, flash, redirect, url_for
 import requests
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///submit.db'
-db = SQLAlchemy(app)
-cache = Cache(app,config={'CACHE_TYPE': 'simple'})
-app.config['SECRET_KEY'] = 'THISISSECRETKEY'
-
-class Submit_data(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    api_email = db.Column(db.String(100), nullable=False)
-    api_name = db.Column(db.String(100), nullable=False)
-    api_desc = db.Column(db.String(1000), nullable=False)
-    api_auth = db.Column(db.String(100), nullable=False)
-    api_https = db.Column(db.Boolean, nullable=False)
-    api_cors = db.Column(db.Boolean, nullable=False)
-    api_link = db.Column(db.String(100), nullable=False)
-    api_category = db.Column(db.String(100), nullable=False)
 
 @cache.cached()
 def api_call():
@@ -82,10 +66,3 @@ def submit():
         except :
             flash('There was an error. Feel free to submit again')
         return redirect(url_for('submit'))
-
-@app.route('/api')
-def api():
-    return render_template('apidocs.html')
-
-if __name__ == '__main__':
-    app.run(debug=True,host='192.168.0.104')
